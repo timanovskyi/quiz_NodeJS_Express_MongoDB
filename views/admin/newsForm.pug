@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+  h1= title
+
+  if errors && errors.errors !== undefined
+    each message in errors.errors
+      p=message
+
+  form(method='post')
+    div
+        label title
+        input(type='text' name='title' value=`${body && body.title ? body.title : ''}`)
+    div
+        label opis
+        input(type='text' name='description' value=`${body && body.description ? body.description : ''}`)    
+    div
+        input(type='submit' value='add news')  
