@@ -17,6 +17,4 @@ const search = req.query.search || '';
 });
 
 
-router.p
-
 module.exports = router;
